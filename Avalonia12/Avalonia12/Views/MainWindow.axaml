@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Avalonia12.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia12.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Avalonia12">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+  <Panel>
+    <StackPanel Margin="20">
+      <TextBlock Margin="0 5" >ФИО:</TextBlock>
+      <TextBox  Watermark="Введите ФИО"/>
+      <TextBlock Margin="0 2" >Серийный номер:</TextBlock>
+      <TextBox  Watermark="Введите серийный номер устройства"/>
+      <SplitButton Content="Порт подключения" >
+        <SplitButton.Flyout>
+          <MenuFlyout Placement="Right">
+            <MenuItem Header="Modbus"/>
+            <MenuItem Header="LAN-кабель">
+              <MenuItem Header="Порт 1" />
+              <MenuItem Header="Порт 2" />
+              <MenuItem Header=" 3" />
+              </MenuItem>
+            <MenuItem Header="RS-485" />
+          </MenuFlyout>
+        </SplitButton.Flyout>
+      </SplitButton>
+      <ListBox></ListBox>
+      <CheckBox Height="15" Margin="0 5"> Наличие внешних повреждений</CheckBox>
+    </StackPanel>
+  </Panel>
+</Window>

@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia12.Window1"
+        Title="Window1">
+  <Panel >
+    <StackPanel Margin="20">
+      <TextBlock Margin="160 2">IP-адрес:</TextBlock>
+    <TextBox  Width="450" Watermark="Введите IP-aдрес устройства"/>
+      <TextBlock Margin="160 2">Мас-адрес:</TextBlock>
+      <TextBox Width="450" Watermark="Введите Мас-aдрес устройства"/>
+      <Button Margin="320 200">Далее</Button>
+    </StackPanel>
+  </Panel>
+</Window>
